@@ -33,13 +33,17 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
       use protected routes and require token for user authentication.
 
 - [ ] Describe how web servers work.
-      they store data that can be retrieved from a user via the web browser.
+      they store data that can be retrieved from a user via the web browser on demand.
 
   - A user makes an HTTP get request for www.google.com
-  - That request is sent to a web server where it can be evaluated.
-  - A response is then sent to the browser displaying googles landing page
+  - That request is sent to a web server where it can be evaluated and data can be retrieved.
+  - Then a response is then sent to the browser displaying googles landing page
 
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+      .post (C)reate
+      .get (R)ead
+      .put (U)pdate
+      .delete (D)elete
 
 ## Project Set Up
 

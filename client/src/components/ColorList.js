@@ -101,7 +101,7 @@ const ColorList = ({ colors, updateColors }) => {
             />
           </li>
         ))}
-        <p onClick={newColor}>➕Add 🎨</p>
+        <p onClick={newColor}>➕Add🎨</p>
       </ul>
       {editing && (
         <form
