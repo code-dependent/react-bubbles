@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { useHistory } from "react-router-dom";
 
 const initFormValue = {
   username: "Lambda School",
   password: "i<3Lambd4",
 };
 const Login = () => {
+  const { push } = useHistory();
   const [credentials, setCredentials] = useState(initFormValue);
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
@@ -24,6 +26,7 @@ const Login = () => {
       .then((res) => {
         window.localStorage.setItem("token", res.data.payload);
         console.log(JSON.stringify(window.localStorage.getItem("token")));
+        push("/protected");
       })
       .catch((er) => {
         console.log(er);
