@@ -22,7 +22,8 @@ const Login = () => {
     axiosWithAuth()
       .post("/api/login", credentials)
       .then((res) => {
-        console.log(res);
+        window.localStorage.setItem("token", res.data.payload);
+        console.log(JSON.stringify(window.localStorage.getItem("token")));
       })
       .catch((er) => {
         console.log(er);
